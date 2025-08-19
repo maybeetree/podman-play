@@ -92,6 +92,23 @@ cmd_run() {
 		sh -l
 }
 
+cmd_run_gpu() {
+	check_not_running "$name"
+	local root_sanitized=$(printf '%s' "$root" | sed 's/:/\\:/g')
+	podman run \
+		--init \
+		--replace \
+		--gpus=all \
+		-ti \
+		--name "$name" \
+		--hostname "$name" \
+		`#-v "$root_sanitized:/play" `\
+		--mount "type=bind,source=$root,target=/play" \
+		--workdir "/play/$(realpath "$PWD" --relative-to "$root")" \
+		"$name" \
+		sh -l
+}
+
 cmd_run_xorg() {
 	check_not_running "$name"
 	local root_sanitized=$(printf '%s' "$root" | sed 's/:/\\:/g')
@@ -159,6 +176,9 @@ case "$action" in
 		;;
 	x* )
 		cmd_run_xorg "$@"
+		;;
+	g* )
+		cmd_run_gpu "$@"
 		;;
 	n* )
 		cmd_run_net "$@"

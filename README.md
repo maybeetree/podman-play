@@ -25,6 +25,7 @@ ln -sf ./podman-play.sh /somewhere/in/your/path/pod
     - The project root is mounted into `/play` in the container
 - `pod n`: run container with host networking
 - `pod x`: run container with host networking and X11 forwarding
+- `pod g`: run container with GPU
 - `pod m`: commit container changes
     - Run this while the container is still running!
         `pod r` runs containers with `--rm`!
