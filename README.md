@@ -34,7 +34,10 @@ ln -sf ./podman-play.sh /somewhere/in/your/path/pod
 
 ## See also
 
-My [dotfiles repo](https://github.com/maybeetree/treeup)
-has scripts for setting up containers meant for interactive use
+- My [dotfiles repo](https://github.com/maybeetree/treeup)
+    has scripts for setting up containers meant for interactive use
+- [podmanned-apps](https://github.com/maybeetree/podmanned-apps)
+    is a collection of Dockerfiles for various apps
+    that have been crafted with the same level of paranoia as this script
 
 
