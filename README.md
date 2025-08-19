@@ -40,4 +40,11 @@ ln -sf ./podman-play.sh /somewhere/in/your/path/pod
     is a collection of Dockerfiles for various apps
     that have been crafted with the same level of paranoia as this script
 
+## Copyright
+
+You should have received a copy of the CC0 Public Domain Dedication along with
+this software. If not, see http://creativecommons.org/publicdomain/zero/1.0/.
+
+COPYLEFT 🄯 2025 MAYBETREE ALL WRONGS DESERVED.
+
 
