@@ -122,7 +122,6 @@ cmd_run_net() {
 		`#-v "$root_sanitized:/play" `\
 		--mount "type=bind,source=$root,target=/play" \
 		--workdir "/play/$(realpath "$PWD" --relative-to "$root")" \
-		-v ~/.Xauthority:/root/.Xauthority:Z \
 		--net=host \
 		"$name" \
 		sh -l
